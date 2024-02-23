@@ -1,0 +1,535 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+<title>Test</title>
+
+<link rel="stylesheet" href="test.css">
+<link rel="stylesheet" href="testone.css">
+<link rel="stylesheet" href="testtwo.css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+
+<script>$("#profileImage").click(function(e) {
+    $("#imageUpload").click();
+});</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+    google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'View Profile', 'Hired'],
+          ['01',  1000,      400],
+          ['02',  1100,      500],
+          ['03',  900,       600],
+          ['04',  1200,      600],
+          ['05',  1020,      700],
+          ['06',  1300,      400],
+          ['07',  1000,       300],
+          ['08',  900,      400],
+          ['09',  1100,      500],
+          ['10',  700,       400],
+          ['11',  1000,      400],
+          ['12',  1000,      400],
+          ['13',  1000,       400]
+        ]);
+
+        var options = {
+          
+          curveType: 'function',
+          legend: { position: 'none' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+</script>
+<script>
+    /* Script for thr dropdown button */
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+    
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+    </script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body class="main" style=" height: 100%;">
+    <div class="section1" >
+        <div class="row" style="width: 17%; float: left;">
+            <div class="side-bar">
+                <div class="header">
+                    <a href="Test.html"><img class="logo" src="Images\logo.png" alt="Jobie"></a>
+                </div>
+                <div class="main-menu">
+                    <ul>
+                        <li> <a class="link1" href="Test.html"><img class="home-icon" src="Images\Vector.png"> <span>Dashboard</span></a></li>
+                        <li> <a class="link2" href="Test.html"><img class="search-icon" src="Images\search 1.png"> <span>Search Job</span></a></li>
+                        <li> <a class="link3" href="Test.html"><img class="app-icon" src="Images\application.png"> <span>Applications</span></a></li>
+                        <li class="test-menu-li1"> <a class="a1 link4" href="Test.html"><img class="msg-icon" src="Images\message.png"> <span>Message</span></a></li>
+                        <li class="test-menu-li2"> <a class="a2 link5" href="Test.html"><img class="stcs-icon" src="Images\statistics.png"> <span>Statistics</span></a></li>
+                        <li class="test-menu-li3"> <a class="a3 link6" href="Test.html"><img class="news-icon" src="Images\ic_news.png"> <span>News</span></a></li>
+                    </ul>
+
+                </div>
+                <div class="footer">
+                    <span class="footertext1">
+                        Jobie Job Portal Admin Dashboard
+
+                    </span>
+                    </br>
+                    <span class="footertext2">
+                        © 2020 All Rights Reserved
+                    </span>
+                    </br>
+                    </br>
+                    <span class="footertext3">
+                        Made with <span class="heart">♥</span> by Peterdraw
+                    </span>
+
+                </div>
+        
+
+            </div>
+
+        </div>
+        <div class="window-right">
+            <div class="nav">
+                <div class="main-tile"><img class="menu-icon" src="Images\ic_menu.png"><h1><span class="menu-text">Statistics</span></h1></div>
+                <div class="search-elements">
+                    <form action="test.html">
+                        <input class="search " id="search" name="search" placeholder="search something here...">
+                        <input type="submit" name="" class="form-submit">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                        
+                    </form>
+                      
+                    
+                </div>
+                <!-----------icon to show messanger and some notifications--->
+                <div class="msg-set">
+                    <div class="icon">
+                        <img src="Images\ic_chat.png" alt="none" width="100%" height="100%" />
+                        <div class="txt">18</div>
+                    </div>
+                </div>
+                <div class="bell-set">
+                    <div class="icon">
+                        <img src="Images\ic_bell.png" alt="none" width="100%" height="100%" />
+                        <div class="txt">52</div>
+                    </div>
+                </div>
+                <div class="admin-tab">
+                    <!-- <image id="profileImage" src="http://lorempixel.com/100/100" /> -->
+                    <!-- <input id="imageUpload" type="file" name="profile_photo" placeholder="Photo" required="" capture> -->
+                    <span id="imageUpload"></span>
+
+                </div>
+                <div class="admin-tab-text">
+                    <span class="nav-text1">Oda Dink</span>
+                    <br>
+                    <span class="nav-text2">Super Admin</span>
+                </div>
+                
+            </div>
+            <!-- chart box modules -->
+            <div class="box-first-row">
+                <div class="bar-char-module">
+                    <div>
+                        <div>
+                            <h2><span class="legendh2">Profile Strength</span></h2>
+                        </div>
+                        <div class="dots-img">
+                            <img src="Images\ic_option.png" style="float: right;" alt="">
+                            <ul class="drop-down">
+                                <li>\>Options yet to add</li>
+                                <li>\>Options yet to add</li>
+                                <li>\>Options yet to add</li>
+                                <li>\>Options yet to add</li>
+                            </ul>
+                        </div>
+                        
+                            
+                        
+                    </div>
+                    <div class="bar-char-module1">
+                        <div class="chart">
+                            <div class="bar" style="--bar-height: 100%; ">
+                            <div class="section s1" style="--section-value: 25;" data-value="30"></div>
+                            <div class="section s2" style="--section-value: 15;" data-value="15"></div>
+                            <div class="section s3" style="--section-value: 40;" data-value="35"></div>
+                            <div class="section s4" style="--section-value: 20; " data-value="20"></div>
+                            <div class="label">Sun</div>
+                            </div>
+                            <div class="bar" style="--bar-height: 100%;">
+                            <div class="section s1" style="--section-value: 15;" data-value="10"></div>
+                            <div class="section s2" style="--section-value: 15;" data-value="10"></div>
+                            <div class="section s3" style="--section-value: 30;" data-value="40"></div>
+                            <div class="section s4" style="--section-value: 40;" data-value="40"></div>
+                            <div class="label">Mun</div>
+                            </div>
+                            <div class="bar" style="--bar-height: 100%;">
+                            <div class="section s1" style="--section-value: 30;" data-value="20"></div>
+                            <div class="section s2" style="--section-value: 40;" data-value="20"></div>
+                            <div class="section s3" style="--section-value: 20;" data-value="20"></div>
+                            <div class="section s4" style="--section-value: 10;" data-value="40"></div>
+                            <div class="label">Tue</div>
+                            </div>
+                            <div class="bar" style="--bar-height: 100%;">
+                            <div class="section s1" style="--section-value: 25;" data-value="20"></div>
+                            <div class="section s2" style="--section-value: 30;" data-value="40"></div>
+                            <div class="section s3" style="--section-value: 15;" data-value="5"></div>
+                            <div class="section s4" style="--section-value: 30;" data-value="5"></div>
+                            <div class="label">Wed</div>
+                            </div>
+                            <div class="bar" style="--bar-height: 100%;">
+                            <div class="section s1" style="--section-value: 10;" data-value="20"></div>
+                            <div class="section s2" style="--section-value: 15;" data-value="15"></div>
+                            <div class="section s3" style="--section-value: 15;" data-value="15"></div>
+                            <div class="section s4" style="--section-value: 60;" data-value="10"></div>
+                            <div class="label">Thu</div>
+                            </div>
+                            <div class="bar" style="--bar-height: 100%;">
+                            <div class="section s1" style="--section-value: 20;" data-value="20"></div>
+                            <div class="section s2" style="--section-value: 40;" data-value="20"></div>
+                            <div class="section s3" style="--section-value: 25;" data-value="30"></div>
+                            <div class="section s4" style="--section-value: 15;" data-value="20"></div>
+                            <div class="label">Fry</div>
+                            </div>
+                            <div class="bar" style="--bar-height: 100%;">
+                            <div class="section s1" style="--section-value: 30;" data-value="20"></div>
+                            <div class="section s2" style="--section-value: 30;" data-value="20"></div>
+                            <div class="section s3" style="--section-value: 10;" data-value="30"></div>
+                            <div class="section s4" style="--section-value: 30;" data-value="15"></div>
+                            <div class="label">Sat</div>
+                            </div>
+                        </div>
+                        <div>
+                            
+                            
+                            <div class="legend">
+                                <h3><span class="legend-title">Legend</span></h3>
+                                <br>
+                                <br>
+                                    
+                                <span class="dot1"></span><span class="rate">30%</span><span class="info">Aplication Sent</span>
+                                <br>
+                                <span class="dot2"></span><span class="rate">46%</span><span class="info">Appllication Answered</span>
+                                <br>
+                                <span class="dot3"></span><span class="rate">14%</span><span class="info">Hired</span>
+                                <br>
+                                <span class="dot4"></span><span class="rate">10%</span><span class="info">Pending</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                
+                <div>
+                    <div class="chat-box-first">
+                        <div class="box-shape">
+                            <span class="t1">Profile Viewed</span>
+                            <br>
+                            <span class="t2">456k</span>
+                            <br>
+                            <br>
+                            &nbsp;
+                            <div class="img-txt">
+                                <div><img class="box-img" src="Images\eye 1.png" alt=""></div>
+                                <div>
+                                <span class="tx1">+24%</span>
+                                <br>
+                                <span class="tx2">than last month</span>
+                            </div>
+                            </div>
+
+                            
+
+
+                        </div>
+                        <div class="box-shape">
+                            <span class="t1">Unread Messages</span>
+                            <br>
+                            <span class="t2">28</span>
+                            <br>
+                            <br>
+                            &nbsp;
+                            <div class="img-txt">
+                                <div><img class="box-img" src="Images\ic_chat-box.png" alt=""></div>
+                                <div>
+                                <span class="tx3"><a href="Test.html">Go to Message</a></span>
+                            </div>
+                            </div>
+
+                            
+
+
+                        </div>
+                        <div class="box-shape">
+                            <span class="t1">Application Sent</span>
+                            <br>
+                            <span class="t2">651</span>
+                            <br>
+                            <br>
+                            &nbsp;
+                            <div class="img-txt">
+                                <div><img class="box-img" src="Images\suitcase 1.png" alt=""></div>
+                                <div>
+                                <!-- <span class="tx3">Go to Message</span> -->
+                            </div>
+                            </div>
+
+                            
+
+
+                        </div>
+                        
+
+                    </div>
+
+                    <div class="chat-box-second">
+                        <div class="box-shape">
+                            <span class="t1">App. Answered</span>
+                            <br>
+                            <span class="t2">24</span>
+                            <br>
+                            <br>
+                            &nbsp;
+                            <div class="img-txt">
+                                <div><img class="box-img" src="Images\reply 1.png" alt=""></div>
+                                <div>
+                                <!-- <span class="tx1">+24%</span>
+                                <br>
+                                <span class="tx2">than last month</span> -->
+                            </div>
+                            </div>
+
+                            
+
+
+                        </div>
+                        <div class="box-shape">
+                            <span class="t1">Interviewed</span>
+                            <br>
+                            <span class="t2">261</span>
+                            <br>
+                            <br>
+                            &nbsp;
+                            <div class="img-txt">
+                                <div><img class="box-img" src="Images\calendar-silhouettex.png" alt=""></div>
+                                <div>
+                                <!-- <span class="tx3">Go to Message</span> -->
+                            </div>
+                            </div>
+
+                            
+
+
+                        </div>
+                        <div class="box-shape">
+                            <span class="t1">Hired</span>
+                            <br>
+                            <span class="t2">69</span>
+                            <br>
+                            <br>
+                            &nbsp;
+                            <div class="img-txt">
+                                <div><img class="box-img" src="Images\telephone 1.png" alt=""></div>
+                                <div>
+                                <!-- <span class="tx3">Go to Message</span> -->
+                            </div>
+                            </div>
+
+                            
+
+
+                        </div>
+                        
+
+                    </div>
+
+
+                </div>
+            </div>
+            <!-- /*--------Second Row Of The Content-------*/ -->
+            <div class="box-second-row">
+                <div class="col-left ">
+                    <div class="first-line display-flex">
+                        <div>
+                            <h2><span class="legendh2">Visitor Group</span></h2>
+                        </div>
+                        <div class="toggle display-flex">
+                            <div><span class="t1 toggle-text">Show Details</span></div>
+                            <div><label class="switch">
+                                <input type="checkbox" checked>
+                                <span class="slider round"></span>
+                            </label>
+                            </div>
+                        </div>
+                        <!-- Dorp down button -->
+                        <div>
+                            <div class="dropdown">
+                                <button onclick="myFunction()" class="dropbtn">Weekly</button>
+                                <i class="arrow down"></i>
+                                <div id="myDropdown" class="dropdown-content">
+                                  <a href="\">Content to be added</a>
+                                  <a href="\">Content to be added</a>
+                                  <a href="\">Content to be added</a>
+                                </div>
+                              </div>
+                              
+                        </div>
+
+                    </div>
+                    <div class="legened1 display-flex">
+                        <div class="display-flex">
+                            <div><span class=" legend1-dot1"></span></div>
+                            <div>
+                                <span class="detail-lt-txt detail-lt-txt1">View Profile</span><br>
+                            </div>
+                        </div>
+                        <div class="display-flex">
+                            <div><span class=" legend1-dot2"></span></div>
+                            <div>
+                                <span class="detail-lt-txt detail-lt-txt1">Hire</span><br>
+                            </div>
+                        </div>
+
+                    </div>
+                
+
+                    <!-- Line-chart -->
+                    <!-- <div id="curve_chart" style="width: 600px; height: 250px"></div> -->
+                    <div id="curve_chart"></div>
+                    <span class="line-span display-flex">
+                    <span><p>01</p></span><span><p>02</p></span><span><p>03</p></span><span><p>04</p></span><span><p>05</p></span><span><p>06</p></span><span><p>07</p></span><span><p>08</p></span><span><p>09</p></span><span><p>10</p></span><span><p>11</p></span><span><p>12</p></span><span><p>13</p></span>
+                    </span>
+
+                    <!-- Line chart end -->
+
+
+
+
+                </div>
+                <div class="col-right">
+                    <div class="pie-char-module ">
+                        <div>
+                            <div>
+                                <h2><span class="legendh2">Network</span></h2>
+                            </div>
+                            <div class="dots-img">
+                                <img src="Images\ic_option.png" style="float: right;" alt="">
+                                <ul class="drop-down">
+                                    <li>\>Options yet to add</li>
+                                    <li>\>Options yet to add</li>
+                                    <li>\>Options yet to add</li>
+                                    <li>\>Options yet to add</li>
+                                </ul>
+                            </div>
+                        
+                        </div>
+                        <div class="pie-chart-wrap display-flex">
+
+                            <div class="detail ">
+                                <div class="detail-cont display-flex">
+                                    <div><span class="detail-dot1"></span></div>
+                                    <div>
+                                        <span class="detail-lt-txt">Folloing</span><br>
+                                        <span class="detail-lrk-txt">567 Companies</span>
+                                    </div>
+                                    
+                                </div>
+                                <div class="detail-cont display-flex">
+                                    <div><span class="detail-dot2"></span></div>
+                                    <div>
+                                        <span class="detail-lt-txt">Followers</span><br>
+                                        <span class="detail-lrk-txt">8,334 Person</span>
+                                    </div>
+                                    
+                                </div>
+
+                            </div>
+                            <div class="pie-chart-wrap1">
+
+                                <div class="pie-chart1">
+                                    <div class="pie1 animate1 no-round1" style="--q:32;--d:#374C98; --a:40px"> 32%</div>
+                                
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="pie-char-module ">
+                        <div>
+                            <div>
+                                <h2><span class="legendh2">Job Trends</span></h2>
+                            </div>
+                            <div class="dots-img">
+                                <img src="Images\ic_option.png" style="float: right;" alt="">
+                                <ul class="drop-down">
+                                    <li>\>Options yet to add</li>
+                                    <li>\>Options yet to add</li>
+                                    <li>\>Options yet to add</li>
+                                    <li>\>Options yet to add</li>
+                                </ul>
+                            </div>
+                            
+                            
+                                
+                            
+                        </div>
+                        <div class="pie-chart-wrap display-flex">
+                            <div class="pie-chart">
+                            <div class="pie" style="--r:#000;--p:66; --b:10px;--c:#40189d"> 66%</div>
+                            <label for="py" class="eb-progress-bar-title">
+                                <h3>Engineer</h3>
+                                <span class="light-text">5,050 Vacancy</span>
+                            </label>
+                            </div>
+                            <div class="pie-chart">
+                            <div class="pie" style="--p:31;--c:#40189d;--b:10px"> 31%</div>
+                            <label for="py" class="eb-progress-bar-title">
+                                <h3>Designer</h3>
+                                <span class="light-text">10,524 Vacany</span>
+                            </label>
+                            </div>
+                            <div class="pie-chart">
+                            <div class="pie no-round" style="--p:75;--c:#40189d;--b:10px"> 75%</div>
+                            <label for="py" class="eb-progress-bar-title">
+                                <h3>Manager</h3>
+                                <span class="light-text">621 Vacancy</span>
+                            </label>
+                            </div>
+                            <div class="pie-chart">
+                            <div class="pie animate no-round" style="--p:62;--c:#40189d; --b:10px"> 62%</div>
+                            <label for="py" class="eb-progress-bar-title">
+                                <h3>Programmer</h3>
+                                <span class="light-text">9,662 Vacancy</span>
+                            </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+</body>
+</html>

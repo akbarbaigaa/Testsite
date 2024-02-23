@@ -1,0 +1,74 @@
+@property --q{
+    syntax: '<number>';
+    inherits: true;
+    initial-value: 1;
+  }
+  
+  .pie-chart1{
+    padding-left:30px;
+    padding-right:30px;
+    margin:10px;
+  }
+  .pie1 {
+    --q:0;
+    --a:50px;
+    --d:darkred;
+    --w:175px;
+      
+    width:var(--w);
+    aspect-ratio:1;
+    position:relative;
+    display:inline-grid;
+    margin:5px;
+    place-content:center;
+    font-size:17px;
+    font-weight:bold;
+    font-family:sans-serif;
+  }
+  .pie1:before,
+  .pie1:after {
+     content:"";
+    position:absolute;
+    border-radius:50%;
+    
+  }
+  .pie1:after{
+    
+   border: none;
+    width:0px}
+  .pie1:before{
+    box-shadow: 0 0 0 20px #000;
+    
+  }
+  .pie1:before {
+    
+    inset:0;
+    background:
+      radial-gradient(farthest-side,var(--d) 98%,#FFAB2D) top/var(--a) var(--a) no-repeat,
+      conic-gradient(var(--d) calc(var(--q)*1%),#FFAB2D 0);
+    -webkit-mask:radial-gradient(farthest-side,#0000 calc(99% - var(--a)),#000 calc(100% - var(--a)));
+            mask:radial-gradient(farthest-side,#0000 calc(99% - var(--a)),#000 calc(100% - var(--a)));
+   
+  }
+  .pie1:after {
+    inset:calc(50% - var(--a)/2);
+    background:var(--d);
+    transform:rotate(calc(var(--q)*0deg)) translateY(calc(50% - var(--w)/2));
+    padding:20px;
+  }
+  
+  .no-round1:before {
+    background-size:0 0,auto;
+    
+  }
+  .no-round1:after {
+    content:none;
+    background-size:0 0,auto;
+  }
+  @keyframes q {
+    from{--q:0}
+  }
+  
+  
+  
+  
